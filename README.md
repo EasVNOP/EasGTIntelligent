@@ -1,8 +1,7 @@
 
 <div align="center">
 
-# CPM-Bee
-
+# OpenGTI
 **百亿参数的开源中英文双语基座大模型**
 
 <p align="center">
