@@ -7,61 +7,43 @@
 
 <p align="center">
   <a href="#模型">模型</a> •
-  <a href="#预训练">OpenBMB体系</a> •
+  <a href="#预训练">OpenGTI体系</a> •
   <a href="#零样本评测">性能表现</a> •
   <a href="#模型协议">开源协议</a>
 </p>
 
 </div>
 
-
+声明：使用CPM-Bee基座训练而来
 ## ✨ 模型介绍
 
-**CPM-Bee**是一个完全开源、允许商用的百亿参数中英文基座模型，也是[**CPM-Live**](https://live.openbmb.org/)训练的第二个里程碑。它采用Transformer自回归架构（auto-regressive），在超万亿（trillion）高质量语料上进行预训练，拥有强大的基础能力。开发者和研究者可以在CPM-Bee基座模型的基础上在各类场景进行适配来以创建特定领域的应用模型。
+**Eas-GTI**是一个完全开源、允许商用的百亿参数中英文基座模型，也是[**GTI-Live**]训练的第二个里程碑。它采用Transformer自回归架构（auto-regressive），在超万亿（trillion）高质量语料上进行预训练，拥有强大的基础能力。开发者和研究者可以在CPM-Bee基座模型的基础上在各类场景进行适配来以创建特定领域的应用模型，尤其善于模仿人类黑客技术
 
-- **👐 开源可商用**：OpenBMB始终秉承“让大模型飞入千家万户”的开源精神，CPM-Bee基座模型将完全开源并且可商用，以推动大模型领域的发展。我们鼓励全球范围内的科研机构、企业和个人开发者在遵守[开源许可协议](#模型协议)的前提下，自由地在CPM-Bee基座模型上进行创新。
+- **开源可商用**：OpenGTI始终秉承“让大模型飞入千家万户”的开源精神，OpenGTI基座模型将完全开源并且可商用，以推动大模型领域的发展。我们鼓励全球范围内的科研机构、企业和个人开发者在遵守[开源许可协议](#模型协议)的前提下，自由地在GPT基座模型上进行创新。
 
-- **💫 中英双语性能优异**：CPM-Bee基座模型在预训练语料上进行了严格的筛选和配比，同时在中英双语上具有亮眼表现，具体可参见[评测任务和结果](#零样本评测)。
+- **中英双语性能优异**：OpenGPT基座模型在预训练语料上进行了严格的筛选和配比，同时在中英双语上具有亮眼表现，具体可参见[评测任务和结果](#零样本评测)。
 
-- **📖 超大规模高质量语料**：CPM-Bee基座模型在超万亿语料进行训练，是开源社区内经过语料最多的模型之一。同时，我们对预训练语料进行了严格的筛选、清洗和后处理以确保质量。
+- **超大规模高质量语料**：原基座模型在超万亿语料进行训练，是开源社区内经过语料最多的模型之一。同时，我们对预训练语料进行了严格的筛选、清洗和后处理以确保质量。
 
-- **<img src="https://i.imgloc.com/2023/05/21/V4nLS3.png" width="20px"> OpenBMB大模型系统生态支持**：OpenBMB大模型系统围绕高性能预训练、适配、压缩、推理开发了一系列工具，CPM-Bee基座模型将配套所有的工具脚本，高效支持开发者进行进阶使用。
-
-
-- **🔨 对话和工具使用能力**： 结合OpenBMB在指令微调和工具学习的探索，我们在CPM-Bee基座模型的基础上进行微调，训练出了具有强大对话和工具使用能力的实例模型，API和内测将于近期开放。
+- **OpenGTI大模型系统生态支持**：OpenGTI大模型系统围绕高性能预训练、适配、压缩、推理开发了一系列工具，CPM-Bee基座模型将配套所有的工具脚本，高效支持开发者进行进阶使用。
 
 
-*Read this in [English](https://github.com/OpenBMB/CPM-Bee/blob/main/README_en.md).*
+- **对话和工具使用能力**： 结合OpenGTI在指令微调和工具学习的探索，我们在CPM-Bee基座模型的基础上进行微调，训练出了具有强大对话和工具使用能力的实例模型，API和内测将于近期开放。
 
 
-说明：CPM-Bee是一个**基座**模型，即从零开始通过**预训练**得来。我们鼓励用户在自己的场景和数据上**适配/微调/对齐**后再进行使用。例如，[WebCPM](https://github.com/thunlp/WebCPM) 以CPM-Bee为基座，在人类网络检索的序列化数据上进行适配，获得了复杂问答和上网检索的能力。后续我们将会发布更多在CPM-Bee基座模型基础上适配的模型。
+
+说明：OpenGTI是一个**基座**模型，即从零开始通过**预训练**得来。我们鼓励用户在自己的场景和数据上**适配/微调/对齐**后再进行使用。例如，[WebCPM](https://github.com/thunlp/WebCPM) 以CPM-Bee为基座，在人类网络检索的序列化数据上进行适配，获得了复杂问答和上网检索的能力。后续我们将会发布更多在OpenGTI基座模型基础上适配的模型。
 
 <div align="center">
-  <img src="https://i.imgloc.com/2023/06/07/VwgLLN.png" width="660px">
   <div align="center">
-  本仓库主要提供 CPM-Bee 基座模型
+  本仓库主要提供 OpenGTI 基座模型
   </div>
 </div>
-
-
-## 📰 更新信息
-
-- **[2023/06/30]**  基于CPM-Bee的多模态系列模型[VisCPM](https://github.com/OpenBMB/VisCPM)发布，支持多模态对话和文生图！
-- **[2023/06/16]**  CPM-Bee现已支持🤗[Transformers](https://huggingface.co/openbmb/cpm-bee-10b)。
-- **[2023/06/08]**  更新了使用CPM-Bee进行基础任务微调的[教程](https://github.com/OpenBMB/CPM-Bee/tree/main/tutorials/basic_task_finetune)。
-- **[2023/05/27]**  百亿参数，允许商用的中英双语基座模型CPM-Bee开源了，它是[**CPM-Live**](https://live.openbmb.org/)的第二个里程碑。
-
-## 🍯 CPM-Bee系列模型
-
-| 模型 | 描述 | 
-| :---: | :---: | 
-|[VisCPM](https://github.com/OpenBMB/VisCPM)| 支持多模态对话和图文双向生成的开源中英双语多模态大模型|
-|[WebCPM](https://github.com/thunlp/WebCPM)| 支持复杂问答和上网检索的开源中文大模型|
 
 ## 🚀 安装和使用
 您需要克隆该仓库：
 ```bash
-$ git clone -b main --single-branch https://github.com/OpenBMB/CPM-Bee.git
+$ git clone -b main --single-branch https://github.com/EasVNOP/GTIntelligent.git
 ```
 并确保您的环境符合要求：
 ```bash
@@ -75,12 +57,8 @@ $ pip install -r requirements.txt
 ```
 注意**torch版本需与CUDA版本对应，不然会引起安装错误**，尤其是torch也是通过pip install -r requirements.txt进行安装时，较为容易出现自动拉取安装的torch版本与本地CUDA版本不对应，导致BMTrain无法安装。
 
-### 模型
-
-- [**10B模型下载链接**](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-10b/cpm-bee-10b.zip)（如果要使用🤗Transformers运行模型，请参考[这里](https://huggingface.co/openbmb/cpm-bee-10b)）。
-
 ### 数据格式
-- 不同于已有基座模型采用非结构化的自由文本形式组织数据，CPM-Bee采用结构化的json格式来组织数据。对于结构化数据，CPM-Bee的基座模型可以准确地进行语义理解，高效完成各类基础任务，包括：填空、文本生成、翻译、问答、评分预测、文本选择题等等，下面给出一些代表性任务的模板：
+- 不同于已有基座模型采用非结构化的自由文本形式组织数据，OpenGTI采用结构化的json格式来组织数据。对于结构化数据，OpenGTI的基座模型可以准确地进行语义理解，高效完成各类基础任务，包括：填空、文本生成、翻译、问答、评分预测、文本选择题等等，下面给出一些代表性任务的模板：
 
 ```json
   "填空":{
@@ -490,11 +468,11 @@ $ pip install -r requirements.txt
 
 ## <img src="https://i.imgloc.com/2023/05/21/V4nLS3.png" width="25px"> OpenBMB 衍生功能
 
-基于OpenBMB的大模型系统生态，我们在训练CPM-Bee的过程中实现了全流程高效。同时提供了模型微调（基于BMTrain和OpenDelta）、工具使用（基于BMTools）、模型压缩（基于BMCook）、低资源推理（基于BMInf）的全套脚本，可以协助开发者快速上手和使用CPM-Bee。
+基于OpenGTI的大模型系统生态，我们在训练OpenGTI的过程中实现了全流程高效。同时提供了模型微调（基于BMTrain和OpenDelta）、工具使用（基于BMTools）、模型压缩（基于BMCook）、低资源推理（基于BMInf）的全套脚本，可以协助开发者快速上手和使用OpenGTI。
 
 ### 模型微调
 
-基于[BMTrain](https://github.com/OpenBMB/BMTrain)和[OpenDelta](https://github.com/thunlp/OpenDelta)，我们给出了两种微调方案：全参数微调和参数高效的增量微调，可以将CPM-Bee适配到各类下游场景中。
+基于[BMTrain](https://github.com/OpenBMB/BMTrain)和[OpenDelta](https://github.com/thunlp/OpenDelta)，我们给出了两种微调方案：全参数微调和参数高效的增量微调，可以将OpenGTI适配到各类下游场景中。
 
 1. 全参数微调：
 ```bash
@@ -556,14 +534,14 @@ torchrun --nnodes=1 --nproc_per_node=4 --rdzv_id=1 --rdzv_backend=c10d --rdzv_en
 
 ### 模型压缩
 
-基于[BMCook](https://github.com/OpenBMB/BMCook)，我们对原始的CPM-Bee基座模型进行压缩，提供了多种大小的CPM-Bee模型来适应各种不同的场景。此外，我们针对不同大小的模型都提供了基于🤗Transformers的版本，您可以点击下方链接进入模型仓库查看更多信息。
+基于[BMCook](https://github.com/OpenBMB/BMCook)，我们对原始的CPM-Bee基座模型进行压缩，提供了多种大小的OpenGTI模型来适应各种不同的场景。此外，我们针对不同大小的模型都提供了基于🤗Transformers的版本，您可以点击下方链接进入模型仓库查看更多信息。
 
 | 模型          | #Attn层 | #FFN层 | Attn隐状态维度 | FFN隐状态维度 | 下载                                       | 🤗Transformers
 | ----------- | ------- | ----- | --------- | -------- | ---------------------------------------- | ---- |
-| CPM-Bee-10B | 48      | 48    | 4096      | 10240    | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-10b/cpm-bee-10b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-10b) |
-| CPM-Bee-5B  | 19      | 24    | 4096      | 10240    | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-5b/cpm-bee-5b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-5b) |
-| CPM-Bee-2B  | 19      | 24    | 2048      | 5120     | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-2b/cpm-bee-2b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-2b) |
-| CPM-Bee-1B  | 19      | 24    | 1280      | 1024     | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-1b/cpm-bee-1b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-1b) |
+| OpenGTI-10B | 48      | 48    | 4096      | 10240    | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-10b/cpm-bee-10b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-10b) |
+| OpenGTI-5B  | 19      | 24    | 4096      | 10240    | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-5b/cpm-bee-5b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-5b) |
+| OpenGTI-2B  | 19      | 24    | 2048      | 5120     | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-2b/cpm-bee-2b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-2b) |
+| OpenGTI-1B  | 19      | 24    | 1280      | 1024     | [链接](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/cpm-bee-1b/cpm-bee-1b.zip) | [链接](https://huggingface.co/openbmb/cpm-bee-1b) |
 
 
 ### 模型部署
@@ -660,7 +638,7 @@ python text_generation_hf.py --multi-gpu --delta delta.pt
 
 | **模型**         | **Score**| **EPRSTMT** | **CSLDCP** | **TNEWSF** | **IFLYTEKF** | **OCNLIF** | **BUSTM** | **CHIDF** | **CSLF**  | **CLUEWSCF** |
 | ---------------  | -------- |----------- | ---------- | ---------- | ------------ | ---------- | --------- | --------- | --------- | ------------ |
-| **CPM-Bee**         | 78.184    | 85.52   | 58.99  | 78.2       | 58.81        | 77.73      | 83.85     | 89.65     | 83.6      | 87.24        |
+| **OpenGTI**         | 78.184    | 85.52   | 58.99  | 78.2       | 58.81        | 77.73      | 83.85     | 89.65     | 83.6      | 87.24        |
 | **Ctyun_Big_Model** | 76.217    | 87.25   | 48.02  | 77.13      | 59.62        | 75.5       | 90.05     | 84.6      | 82.9      | 81.72        |
 | **PaddleNLP-UTC**   | 70.547    | 85.92   | 58.92  | 68.27      | 40.15        | 74.79      | 76.7      | 82.75     | 70.6      | 74.48        |
 | **二郎神-UnifiedMC** | 70.295    | 88.71   | 50.18  | 71.67      | 40.58        | 75.5       | 80.15     | 84.85     | 60.6      | 81.72        |
@@ -678,13 +656,13 @@ python text_generation_hf.py --multi-gpu --delta delta.pt
 | **PaLM**         |       | 84.8      | 80.5     | -        | 79.7          | 77             | 75.2      | 52.5      | 50.4     |
 | **LLaMA-7B**     | 66.13 | 76.5      | 79.8     | 48.9     | 76.1          | 70.1           | 72.8      | 47.6      | 57.2     |
 | **LLaMA-13B**    | 68.08 | 78.1      | 80.1     | 50.4     | 79.2          | 73             | 74.8      | 52.7      | 56.4     |
-| **CPM-Bee** | 67.80 | 78.69     | 77.58    | 61.11    | 78.89         | 61.88          | 66.88     | 54.18     | 63.20    |
+| **OpenGTI** | 67.80 | 78.69     | 77.58    | 61.11    | 78.89         | 61.88          | 66.88     | 54.18     | 63.20    |
 
 
 
 ### CPM-Bee + Decoder Tuning
 
-使用和OpenBMB和THUNLP联合自研的[Decoder Tuning](https://arxiv.org/abs/2212.08408)（将发表于ACL 2023）技术，可以仅仅使用API的情况下，不访问和修改模型参数即可大幅提高下游任务的性能。
+使用和OpenGTI和THUNLP联合自研的[Decoder Tuning](https://arxiv.org/abs/2212.08408)（将发表于ACL 2023）技术，可以仅仅使用API的情况下，不访问和修改模型参数即可大幅提高下游任务的性能。
 实现代码[链接](https://github.com/thunlp/DecT)。
 
 
@@ -709,6 +687,6 @@ python text_generation_hf.py --multi-gpu --delta delta.pt
 CPM-Bee基座采用协议为[“通用模型许可协议-来源说明-宣传限制-商业授权”](https://github.com/OpenBMB/General-Model-License/blob/main/%E9%80%9A%E7%94%A8%E6%A8%A1%E5%9E%8B%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE-%E6%9D%A5%E6%BA%90%E8%AF%B4%E6%98%8E-%E5%AE%A3%E4%BC%A0%E9%99%90%E5%88%B6-%E5%95%86%E4%B8%9A%E6%8E%88%E6%9D%83.md)，本模型允许商用，如需将模型用于商业用途，请联系cpm@modelbest.cn来获取书面授权。
 
 #### 声明
-作为一个语言模型，CPM-Bee通过学习大量的文本来生成内容，但它无法理解、表达个人观点或价值判断，它所输出的任何内容都不代表模型开发者的观点和立场。
-因此用户在使用CPM-Bee生成的内容时，应自行负责对其进行评估和验证。
+作为一个语言模型，OpenGTI通过学习大量的文本来生成内容，但它无法理解、表达个人观点或价值判断，它所输出的任何内容都不代表模型开发者的观点和立场。
+因此用户在使用OpenGTI生成的内容时，应自行负责对其进行评估和验证。
 
